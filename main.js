@@ -63,8 +63,10 @@ let OSVersion = getOS();
 
 if (OSVersion == "Windows") {
   $(".MacOS").css("display", "none");
+  $("#youLikeMacs").css("display", "none");
 }
 if (OSVersion == "iOS" || OSVersion == "MacOS") {
   $(".tutorial").css("display", "none");
   $("#tutorial2").css("display", "block");
+  $("#youLikePCs").css("display", "none");
 }

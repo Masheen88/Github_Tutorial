@@ -34,6 +34,15 @@ h3 {
   padding: 20px;
   margin: 20px;
   border: 1px solid #ccc;
+  transition: 0.5s background-color;
+}
+
+/* color tutorial1 slowly on hover */
+#tutorial1:hover,
+#tutorial2:hover,
+#tutorial3:hover {
+  background-color: #066ab760;
+  transition-delay: 0.01s;
 }
 
 #commandEmail {
@@ -48,10 +57,11 @@ h3 {
 #dropdownSection3 {
   color: black;
   background-color: #ffffffaa;
+  border: 1px solid #ccc;
+  filter: drop-shadow(5px 2px 5px #26262680);
   width: 75%;
   padding: 20px;
   margin: 20px;
-  border: 1px solid #ccc;
 }
 
 /* center image */
@@ -94,11 +104,7 @@ img {
 
 .bg {
   animation: slide 40s ease-in-out infinite alternate;
-  background-image: linear-gradient(
-    -60deg,
-    rgb(25, 25, 25) 50%,
-    rgb(0, 90, 150) 50%
-  );
+  background-image: linear-gradient(-60deg, #191919 50%, #005a96 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;

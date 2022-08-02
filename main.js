@@ -22,10 +22,49 @@ function showDropdown(tutorialID, tutorialDropdownID) {
       $(`${tutorialDropdownID}`).css("display", "block");
     } else {
       $(`${tutorialDropdownID}`).fadeOut(800);
-      //display none after fadeout with delay
       setTimeout(function () {
         $(`${tutorialDropdownID}`).css("display", "none");
       }, 900);
     }
   });
+}
+
+function getOS() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(userAgent)) {
+    console.log("Android");
+    return "Android";
+  }
+
+  // iOS
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    console.log("iOS");
+    return "iOS";
+  }
+
+  // Mac OS
+  if (/Mac OS/.test(userAgent)) {
+    console.log("MacOS");
+    return "MacOS";
+  }
+
+  // Windows OS
+  if (/Windows/.test(userAgent)) {
+    console.log("Windows");
+    return "Windows";
+  }
+
+  console.log("Unknown OS");
+  return "unknown";
+}
+
+let OSVersion = getOS();
+
+if (OSVersion == "Windows") {
+  $(".MacOS").css("display", "none");
+}
+if (OSVersion == "iOS" || OSVersion == "MacOS") {
+  $(".tutorial").css("display", "none");
+  $("#tutorial2").css("display", "block");
 }

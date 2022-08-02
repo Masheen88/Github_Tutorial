@@ -1,0 +1,87 @@
+body {
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tutorial1,
+#tutorial2,
+#tutorial3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #8383832f;
+  /* width: 35%; */
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+#commandEmail {
+  color: darkblue;
+}
+#command {
+  color: darkred;
+}
+
+#dropdownSection1,
+#dropdownSection2,
+#dropdownSection3 {
+  color: black;
+  background-color: #ffffffaa;
+  width: 75%;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+/* center image */
+img {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+#addSSHKey {
+  width: 50%;
+}
+
+/* media query for mobile */
+@media screen and (max-width: 600px) {
+  #tutorial1,
+  #tutorial2,
+  #tutorial3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  #dropdownSection1,
+  #dropdownSection2,
+  #dropdownSection3 {
+    width: 85%;
+  }
+
+  img {
+    width: 80%;
+  }
+}

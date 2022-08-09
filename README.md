@@ -2,8 +2,8 @@
 
 ## Second Heading
 
-```js
-This is a test to see how the colors work.
+```html
+<div style="color: red">This is a test to see how the colors work.</div>
 ```
 
 <html>

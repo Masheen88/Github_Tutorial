@@ -1,11 +1,3 @@
-# Color Test Document
-
-## Second Heading
-
-```diff
-+ This is a test to see how the colors work.
-```
-
 <html>
 
 # Github_Tutorial

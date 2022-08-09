@@ -1,4 +1,3 @@
-$$
 <html>
 
 # Github_Tutorial
@@ -53,4 +52,3 @@ echo "# This is my first commit" >> README.md
 ```
 
 </html>
-$$

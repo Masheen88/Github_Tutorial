@@ -15,7 +15,7 @@ echo "# This is my first commit" >> README.md
 
 //Copies an existing repository to your computer
 
-- git clone https://github.com/**some_user**/**some_repo**
+- git clone <div style="display" inline">https://github.com/**some_user**/**some_repo**</div>
 
 3. Updating exiting files in your repository
 

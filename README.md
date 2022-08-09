@@ -9,7 +9,7 @@ echo "# This is my first commit" >> README.md
 - git add README.md
 - git commit -m "first commit"
 - git branch -M main
-- git remote add origin ` https://github.com/`<span color="#ff0000">your_user</span>/**your_repo**
+- git remote add origin ` https://github.com/` @@your_user@@</span>/**your_repo**
 - git push -u origin main
 
 2. **Add an existing repository**

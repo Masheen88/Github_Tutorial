@@ -2,12 +2,10 @@
 
 ## Second Heading
 
+```js
 This is a test to see how the colors work.
+```
 
-<style>
-
-p{color:Red !important;}
-</style>
 <html>
 
 # Github_Tutorial
@@ -20,7 +18,7 @@ echo "# This is my first commit" >> README.md
 - git add README.md
 - git commit -m "first commit"
 - git branch -M main
-- git remote add origin `https://github.com/`<span>your_user</span>/**your_repo**
+- git remote add origin `https://github.com/`your_user/**your_repo**
 - git push -u origin main
 
 2. **Add an existing repository**

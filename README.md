@@ -12,8 +12,7 @@
 
 1. **Adding a new repository**
 
-echo "# This is my first commit" >> README.md
-
+- echo "# This is my first commit" >> README.md
 - git init
 - git add README.md
 - git commit -m "first commit"

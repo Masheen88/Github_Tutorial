@@ -59,7 +59,7 @@ function getOS() {
   return "unknown";
 }
 
-let OSVersion = getOS();
+// let OSVersion = getOS();
 
 if (OSVersion == "Windows") {
   $(".MacOS").css("display", "none");

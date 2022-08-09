@@ -11,6 +11,7 @@ echo "# This is my first commit" >> README.md
 - git branch -M main
 - git remote add origin ` https://github.com/`your_user</span>/**your_repo**
 - git push -u origin main
+  $$\textcolor{yellow}{\text{Hello World}}$$
 
 2. **Add an existing repository**
 

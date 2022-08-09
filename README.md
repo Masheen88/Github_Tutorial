@@ -2,8 +2,8 @@
 
 ## Second Heading
 
-```html
-This is a test to see how the colors work.
+```diff
+This is a + test to see how the colors work.
 ```
 
 <html>

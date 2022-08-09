@@ -4,11 +4,11 @@
 
 This is a test to see how the colors work.
 
-<html>
 <style>
 
-span{color:Red !important;}
+p{color:Red !important;}
 </style>
+<html>
 
 # Github_Tutorial
 

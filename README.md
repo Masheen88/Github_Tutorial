@@ -3,7 +3,7 @@
 ## Second Heading
 
 ```diff
-This is a + test to see how the colors work.
++ This is a test to see how the colors work.
 ```
 
 <html>

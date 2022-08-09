@@ -19,6 +19,7 @@
 
 - git clone `https://github.com/`**some_user**/**some_repo**
 
+<br />
 3. Updating exiting files in your repository
 
 //Add all files
@@ -37,6 +38,7 @@
 
 - git push
 
+<br />
 **Additional Commands**
 
 //Display the current status of your files. Do this often!

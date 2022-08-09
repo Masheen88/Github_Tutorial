@@ -1,5 +1,6 @@
-<html>
 $$
+<html>
+
 # Github_Tutorial
 
 1. **Adding a new repository**
@@ -51,6 +52,5 @@ echo "# This is my first commit" >> README.md
 
 ```
 
-$$
 </html>
 $$

@@ -8,21 +8,22 @@ echo "# This is my first commit" >> README.md
 - git add README.md
 - git commit -m "first commit"
 - git branch -M main
-- git remote add origin https://github.com/your_user/your_repo
+- git remote add origin https://github.com/**your_user**/**your_repo**
 - git push -u origin main
 
 2. **Add an existing repository**
 
 //Copies an existing repository to your computer
 
-- git clone https://github.com/some_user/some_repo
+- git clone https://github.com/**some_user**/**some_repo**
 
 3. Updating exiting files in your repository
-   //Add all files
+
+//Add all files
 
 - git add .
 
-//Add a specific file ie index.html
+//Add a specific file ie: **index.html**
 
 - git add someFile.fileextension
 

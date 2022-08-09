@@ -1,8 +1,3 @@
-<style>
-
-span{color:Red !important;}
-</style>
-
 # Color Test Document
 
 ## Second Heading
@@ -10,6 +5,10 @@ span{color:Red !important;}
 This is a test to see how the colors work.
 
 <html>
+<style>
+
+span{color:Red !important;}
+</style>
 
 # Github_Tutorial
 

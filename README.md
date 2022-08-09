@@ -3,7 +3,7 @@
 ## Second Heading
 
 ```html
-<div style="color: red">This is a test to see how the colors work.</div>
+This is a test to see how the colors work.
 ```
 
 <html>

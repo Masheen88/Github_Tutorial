@@ -26,6 +26,7 @@ function showDropdown(tutorialID, tutorialDropdownID) {
         $(`${tutorialDropdownID}`).css("display", "none");
       }, 900);
     }
+    //remove the click
   });
 }
 
@@ -70,3 +71,18 @@ if (OSVersion == "iOS" || OSVersion == "MacOS") {
   $("#tutorial2").css("display", "block");
   $("#youLikePCs").css("display", "none");
 }
+
+let tutorialLink1 = document.getElementById("tutorialLink1");
+let tutorialLink2 = document.getElementById("tutorialLink2");
+
+tutorialLink1.addEventListener("click", function () {
+  $(`#tutorial3`).off("click");
+  //expand tutorial1Dropdown
+  $(`${tutorial1Dropdown}`).toggleClass("show");
+});
+
+tutorialLink2.addEventListener("click", function () {
+  $(`#tutorial3`).off("click");
+  //expand tutorial2Dropdown
+  $(`${tutorial2Dropdown}`).toggleClass("show");
+});

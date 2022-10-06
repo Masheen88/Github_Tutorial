@@ -6,6 +6,10 @@ p,
 a {
   color: #ffffffaa;
 }
+#tutorialLink1,
+#tutorialLink2 {
+  color: darkgreen;
+}
 
 .hyperLink {
   color: darkgreen;

@@ -7,6 +7,15 @@ a {
   color: #ffffffaa;
 }
 
+.hyperLink {
+  color: darkgreen;
+  font-size: 20px;
+}
+
+.initialSteps {
+  color: red;
+}
+
 body {
   background-color: #2a2a2a;
   display: flex;
@@ -26,9 +35,23 @@ h2 {
   align-items: center;
 }
 
+.logoRow {
+  display: flex;
+}
+.column {
+  width: 100px;
+}
 #macLogo {
+  flex: 50%;
   filter: invert(100%);
   width: 100px;
+  margin: 0;
+}
+
+#windowsLogo {
+  flex: 100%;
+  width: 50px;
+  margin: 28px 28px 28px 28px;
 }
 
 #VSCLogo {
@@ -77,8 +100,11 @@ h5 {
 #commandEmail {
   color: darkblue;
 }
-#command {
+.command {
   color: darkred;
+}
+.command2 {
+  color: darkgreen;
 }
 
 #dropdownSection1,

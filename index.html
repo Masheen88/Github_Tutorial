@@ -16,24 +16,131 @@
       Please follow the tutorials below before proceeding to
       <a href="https://www.youtube.com/watch?v=NGeksLUB1e8">this video!</a>
     </p>
+    <!--
     <h5 id="youLikeMacs">
       I see you enjoy Apple products, here are some tutorials for you! ;)
     </h5>
     <h5 id="youLikePCs">
       I see you enjoy Windows products, here are some tutorials for you! ;)
     </h5>
+    -->
     <!-- Tutorial 1 -->
     <div id="tutorial1" class="MacOS">
       <h2>
         Personal Access Token Tutorial
-        <img src="./tutorial_images/apple.png" alt="mac logo" id="macLogo" />
+        <div class="logoRow">
+          <div class="column">
+            <img
+              src="./tutorial_images/apple.png"
+              alt="mac logo"
+              id="macLogo"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="./tutorial_images/windows.png"
+              alt="windows logo"
+              id="windowsLogo"
+            />
+          </div>
+        </div>
       </h2>
       <div id="dropdownSection1" style="display: none">
-        <h2>Creating a Repository</h2>
         <h2>Generating a Personal Access Token</h2>
+        <p class="initialSteps">
+          <!-- hyper link -->
+          Please follow the steps
+          <a
+            class="hyperLink"
+            href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
+            >located here!</a
+          >. If these do not work for you, please follow the steps located
+          below.
+        </p>
+        <h4>Follow the commands in order:</h4>
         <li>
-          git clone https://github.com/username/repo.git Username: your_username
-          Password: your_token (The token you generated from Github)
+          Open <b class="command">Terminal (Mac)</b> or
+          <b class="command">Command Prompt (Windows)</b>
+        </li>
+        <li>
+          cd into
+          <b class="command"
+            >Promineo_Tech/Week-01-CLI_Source_Control_and_Variables directory</b
+          >
+        </li>
+        <li>
+          Create a new respository on GitHub by clicking the
+          <b class="command">New</b> button on the top right of the screen.
+        </li>
+        <li>
+          Name the repository <b class="command">some-repo-name-here</b> and
+          click
+          <b class="command">Create Repository</b>
+        </li>
+        <li>
+          Copy the portion of code located under,
+          <b class="command">
+            ...or create a new repository on the command line.</b
+          >
+        </li>
+        <li>The code will look something like:</li>
+        <ul>
+          <li>
+            <b class="command">echo "# github-tutorial" >> README.md</b>
+          </li>
+          <li>
+            <b class="command">git init</b>
+          </li>
+          <li>
+            <b class="command">git add README.md</b>
+          </li>
+          <li>
+            <b class="command">git commit -m "first commit"</b>
+          </li>
+          <li>
+            <b class="command">git branch -M main</b>
+          </li>
+          <li>
+            <b class="command"
+              >git remote add origin https://github.com/your_user/your_repo</b
+            >
+          </li>
+          <li>
+            <b class="command">git push -u origin main</b>
+          </li>
+        </ul>
+        <li>
+          Paste the code into the terminal/command prompt and press
+          <b class="command"> enter</b>.
+        </li>
+
+        <li>It may prompt you to enter your GitHub email and password.</li>
+        <ul>
+          <li>
+            <b class="command"
+              >git config --global user.email
+              <b class="command2"> your_github_email@gmail.com</b>
+            </b>
+          </li>
+          <li>
+            <b class="command"
+              >git config --global user.name
+              <b class="command2"> your_github_username</b>
+            </b>
+          </li>
+        </ul>
+
+        <li>
+          You may need to run the
+          <b class="command">git push -u origin main</b> again.
+        </li>
+
+        <li>
+          Go to your GitHub repository and you should see your README.md file.
+        </li>
+        <li>
+          Press enter and you should see a message that says, "Everything up to
+          date"
         </li>
       </div>
     </div>
@@ -48,34 +155,34 @@
         <!-- Part 1: Generating your SSH token -->
         <h3>Part 1: Generating your SSH token</h3>
         <h4>Follow the commands in order:</h4>
-        <li>Open <b id="command">Terminal</b></li>
-        <li><b id="command">cd ~/</b></li>
+        <li>Open <b class="command">Terminal</b></li>
+        <li><b class="command">cd ~/</b></li>
         <li>
-          <b id="command">ls </b> and look for a folder called <b>.ssh</b>
+          <b class="command">ls </b> and look for a folder called <b>.ssh</b>
           <ul>
             <li>
               If you do not have a folder called <b>.ssh</b> run
-              <b id="command">mkdir .ssh</b>
+              <b class="command">mkdir .ssh</b>
             </li>
           </ul>
         </li>
-        <li><b id="command">cd .ssh</b></li>
+        <li><b class="command">cd .ssh</b></li>
         <li>
-          <b id="command"
+          <b class="command"
             >ssh-keygen -t ed25519 -C "<b id="commandEmail"
               >your-github-email@example.com</b
             >"</b
           >
         </li>
         <li>
-          Enter a file in which to save the key: <b id="command">id_rsa</b>
+          Enter a file in which to save the key: <b class="command">id_rsa</b>
         </li>
         <li>
           Enter passphrase (empty for no passphrase):
-          <b id="command">Press Enter</b>
+          <b class="command">Press Enter</b>
         </li>
-        <li>Enter same passphrase again: <b id="command">Press Enter</b></li>
-        <li><b id="command">Open .</b></li>
+        <li>Enter same passphrase again: <b class="command">Press Enter</b></li>
+        <li><b class="command">Open .</b></li>
         <li>
           Open <b>id_rsa.pub</b> with <b>textEdit</b> and copy the code inside.
         </li>
@@ -127,9 +234,11 @@
         />
       </h2>
       <div id="dropdownSection3" style="display: none">
-        <li>Open <b id="command">Visual Studio Code (VSC)</b></li>
-        <li>Click on the <b id="command">Extensions</b>icon</li>
-        <li>Search for <b id="command">GitHub Pull Requests and Issues</b></li>
+        <li>Open <b class="command">Visual Studio Code (VSC)</b></li>
+        <li>Click on the <b class="command">Extensions</b>icon</li>
+        <li>
+          Search for <b class="command">GitHub Pull Requests and Issues</b>
+        </li>
       </div>
     </div>
 

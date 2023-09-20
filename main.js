@@ -1,34 +1,75 @@
-$("#dropdownSection1").css("display", "none");
+// Hide all dropdowns initially
+$(".dropdownSection").hide();
 
-let tutorial1 = "#tutorial1";
-let tutorial1Dropdown = "#dropdownSection1";
-showDropdown(tutorial1, tutorial1Dropdown);
-let tutorial2 = "#tutorial2";
-let tutorial2Dropdown = "#dropdownSection2";
-showDropdown(tutorial2, tutorial2Dropdown);
+// Store all tutorial and dropdown IDs in arrays
+const tutorialIds = ["#tutorial1", "#tutorial2", "#tutorial3"];
+const dropdownIds = [
+  "#dropdownSection1",
+  "#dropdownSection2",
+  "#dropdownSection3",
+];
 
-let tutorial3 = "#tutorial3";
-let tutorial3Dropdown = "#dropdownSection3";
-showDropdown(tutorial3, tutorial3Dropdown);
-
-function showDropdown(tutorialID, tutorialDropdownID) {
-  console.log("Showing dropdown ID:", tutorialID, tutorialDropdownID);
-
-  $(`${tutorialID}`).click(function () {
-    $(`${tutorialDropdownID}`).toggleClass("show");
-
-    if ($(`${tutorialDropdownID}`).hasClass("show")) {
-      $(`${tutorialDropdownID}`).fadeIn(900);
-      $(`${tutorialDropdownID}`).css("display", "block");
-    } else {
-      $(`${tutorialDropdownID}`).fadeOut(800);
-      setTimeout(function () {
-        $(`${tutorialDropdownID}`).css("display", "none");
-      }, 900);
+// Function to hide all dropdowns except for one
+function hideOtherDropdowns(exceptId) {
+  dropdownIds.forEach((id) => {
+    if (id !== exceptId) {
+      $(id).removeClass("show").hide();
     }
-    //remove the click
   });
 }
+
+// Function to show a specific dropdown
+function showDropdown(tutorialID, dropdownID) {
+  $(tutorialID).click(function () {
+    hideOtherDropdowns(dropdownID); // Hide all other dropdowns
+
+    const $dropdown = $(dropdownID);
+
+    if ($dropdown.hasClass("show")) {
+      $dropdown.removeClass("show").css("overflow", "hidden");
+
+      $dropdown.animate(
+        {
+          "max-height": "0",
+          opacity: "0",
+        },
+        900,
+        function () {
+          $dropdown.hide();
+        }
+      );
+    } else {
+      $dropdown.css({
+        "max-height": "none",
+        display: "block",
+      });
+
+      const actualHeight = $dropdown.outerHeight(true);
+
+      $dropdown.css("max-height", "0");
+
+      $dropdown
+        .show()
+        .addClass("show")
+        .animate(
+          {
+            "max-height": actualHeight + "px",
+            opacity: "1",
+          },
+          900,
+          function () {
+            // Animation complete, allow overflow content to be visible
+            $dropdown.css("overflow", "auto");
+          }
+        );
+    }
+  });
+}
+
+// Attach click events
+tutorialIds.forEach((tutorialID, index) => {
+  showDropdown(tutorialID, dropdownIds[index]);
+});
 
 function getOS() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;

@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <div class="bg"></div>
   <div class="bg bg2"></div>
   <div class="bg bg3"></div>
-  <body class="content">
+  <body id="page-content" class="content">
     <h1>GitHub Tutorial</h1>
-    <p>
+    <p id="video">
       Please follow the tutorials below before proceeding to
       <a href="https://www.youtube.com/watch?v=NGeksLUB1e8">this video!</a>
     </p>
-    <!--
-    <h5 id="youLikeMacs">
-      I see you enjoy Apple products, here are some tutorials for you! ;)
-    </h5>
-    <h5 id="youLikePCs">
-      I see you enjoy Windows products, here are some tutorials for you! ;)
-    </h5>
-    -->
-    <!-- Tutorial 1 -->
-    <div id="tutorial1" class="MacOS">
+    <!-- Tutorial Completion -->
+
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="fireworks-container"></div>
+
+    <!-- NOTE Section 1 -->
+    <div id="tutorial1" class="MacOS Windows">
       <h2>
         Personal Access Token Tutorial
         <div class="logoRow">
@@ -45,6 +48,7 @@
           </div>
         </div>
       </h2>
+
       <div id="dropdownSection1" style="display: none">
         <h2>Generating a Personal Access Token</h2>
         <p class="initialSteps">
@@ -53,9 +57,10 @@
           <a
             class="hyperLink"
             href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
-            >located here!</a
-          >. If these do not work for you, please follow the steps located
-          below.
+          >
+            located here!
+          </a>
+          . If these do not work for you, please follow the steps located below.
         </p>
         <h4>Follow the commands in order:</h4>
         <li>
@@ -64,12 +69,12 @@
         </li>
         <li>
           cd into
-          <b class="command"
-            >Promineo_Tech/Week-01-CLI_Source_Control_and_Variables directory</b
-          >
+          <b class="command">
+            Promineo_Tech/Week-01-CLI_Source_Control_and_Variables directory
+          </b>
         </li>
         <li>
-          Create a new respository on GitHub by clicking the
+          Create a new repository on GitHub by clicking the
           <b class="command">New</b> button on the top right of the screen.
         </li>
         <li>
@@ -80,8 +85,8 @@
         <li>
           Copy the portion of code located under,
           <b class="command">
-            ...or create a new repository on the command line.</b
-          >
+            ...or create a new repository on the command line.
+          </b>
         </li>
         <li>The code will look something like:</li>
         <ul>
@@ -101,9 +106,9 @@
             <b class="command">git branch -M main</b>
           </li>
           <li>
-            <b class="command"
-              >git remote add origin https://github.com/your_user/your_repo</b
-            >
+            <b class="command">
+              git remote add origin https://github.com/your_user/your_repo
+            </b>
           </li>
           <li>
             <b class="command">git push -u origin main</b>
@@ -117,14 +122,14 @@
         <li>It may prompt you to enter your GitHub email and password.</li>
         <ul>
           <li>
-            <b class="command"
-              >git config --global user.email
+            <b class="command">
+              git config --global user.email
               <b class="command2"> your_github_email@gmail.com</b>
             </b>
           </li>
           <li>
-            <b class="command"
-              >git config --global user.name
+            <b class="command">
+              git config --global user.name
               <b class="command2"> your_github_username</b>
             </b>
           </li>
@@ -144,7 +149,8 @@
         </li>
       </div>
     </div>
-    <!-- Tutorial 2 -->
+    <!-- Tutorial 1 - End-->
+    <!-- NOTE Section 2 -->
     <div id="tutorial2" class="MacOS">
       <h2>
         Secure Shell (SSH) Tutorial
@@ -168,11 +174,11 @@
         </li>
         <li><b class="command">cd .ssh</b></li>
         <li>
-          <b class="command"
-            >ssh-keygen -t ed25519 -C "<b id="commandEmail"
-              >your-github-email@example.com</b
-            >"</b
-          >
+          <b class="command">
+            ssh-keygen -t ed25519 -C "
+            <b id="commandEmail"> your-github-email@example.com </b>
+            "
+          </b>
         </li>
         <li>
           Enter a file in which to save the key: <b class="command">id_rsa</b>
@@ -186,7 +192,11 @@
         <li>
           Open <b>id_rsa.pub</b> with <b>textEdit</b> and copy the code inside.
         </li>
-        <img src="./tutorial_images/id_rsa.png" alt="id_rsa example code" />
+        <img
+          id="id-rds-png"
+          src="./tutorial_images/id_rsa.png"
+          alt="id_rsa example code"
+        />
 
         <!-- Part 2: Adding your SSH token to GitHub -->
         <h3>Part 2: Adding your SSH token to GitHub</h3>
@@ -202,7 +212,11 @@
           In the "Access" section of the sidebar, click <b>SSH and GPG keys</b>.
         </li>
         <li>Click New SSH key or Add SSH key.</li>
-        <img src="./tutorial_images/ssh-add-ssh-key.png" alt="ssh Key title" />
+        <img
+          id="ssh-add-ssh-key-png"
+          src="./tutorial_images/ssh-add-ssh-key.png"
+          alt="ssh Key title"
+        />
         <li>
           In the "Title" field, add a descriptive label for the new key such as,
           <b>id_rsa</b>
@@ -223,8 +237,9 @@
         />
       </div>
     </div>
-    <!-- Tutorial 3 -->
-    <div id="tutorial3" class="Windows">
+    <!-- Tutorial 2 - End-->
+    <!-- NOTE Section 3 -->
+    <div id="tutorial3" class="MacOS Windows">
       <h2>
         Visual Studio Code (VSC) Tutorial
         <img
@@ -287,22 +302,36 @@
           <ul class="originalTutorials">
             <!-- open Personal Access Token Tutorial Element -->
             <li>
-              <a href="#tutorial1" id="tutorialLink1"
-                >Personal Access Token Tutorial (Windows/Mac)</a
-              >
+              <a href="#tutorial1" id="tutorialLink1">
+                Personal Access Token Tutorial (Windows/Mac)
+              </a>
             </li>
             <!-- open Secure Shell (SSH) Tutorial Element -->
             <li>
-              <a href="#tutorial2" id="tutorialLink2"
-                >Secure Shell (SSH) Tutorial (Mac)</a
-              >
+              <a href="#tutorial2" id="tutorialLink2">
+                Secure Shell (SSH) Tutorial (Mac)
+              </a>
             </li>
           </ul>
         </li>
       </div>
     </div>
+    <!-- Tutorial 3 - End-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles-preset-fireworks/2.2.2/tsparticles.preset.fireworks.bundle.min.js"
+      integrity="sha512-VueFoElqluxKuJ7v+8sWXjWLUb4MXh14aKZh2/d1Y7Iqi84Yu9l3tmJjaX52ZMeYuKonVfXA1YwZRNj08SqJkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./main.js"></script>
   </body>
+  <div id="screen-space"></div>
+  <footer>by Matthew Cox</footer>
 </html>
